@@ -1,0 +1,28 @@
+<h1 class="ml-3 mt-2 mb-3">Список товаров</h1>
+<div class="conainer">
+  <div class="row my-3 mx-3"></div>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th class="align-middle" scope="col" [style.width]="'20%'">Наименование товара</th>
+        <th class="align-middle" scope="col" [style.width]="'20%'">Количество товаров</th>
+        <th class="align-middle" scope="col" [style.width]="'20%'">
+            <button class="btn btn-primary" (click)="onAddGood()">
+                Добавить товар
+            </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let good of goods" class="{{good.type === true? 'table-default': 'table-success'}}">
+        <td> {{good.name}} </td>
+        <td> {{good.count}} </td>
+        <td> <button class="btn btn-warning mr-3" (click)="onEditType(good)">Изменить статус</button></td>
+        <td>
+            <button class="btn btn-primary mr-3" (click)="onEditGood(good.id)">Изменить</button>
+            <button class="btn btn-danger ml-1" (click)="onDeleteGood(good.id)">Удалить</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

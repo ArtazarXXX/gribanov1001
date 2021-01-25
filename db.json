@@ -1,0 +1,22 @@
+{
+  "goods": [
+    {
+      "name": "Апельсины",
+      "count": 200,
+      "type": false,
+      "id": 2
+    },
+    {
+      "name": "Персики",
+      "count": 300,
+      "type": true,
+      "id": 3
+    },
+    {
+      "name": "Бананы",
+      "count": "130",
+      "type": false,
+      "id": 4
+    }
+  ]
+}
